@@ -12,6 +12,7 @@ const Character = props => {
             <p><span>hair color: </span>{props.character.hair_color}</p>
             <p><span>height: </span>{props.character.height}"</p>
             <p><span>mass: </span>{props.character.mass}kg</p>
+            <input onChange={props.doAThing} placeholder="does a thing..."></input>
         </div>
     );
 }
