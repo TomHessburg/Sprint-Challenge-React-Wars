@@ -1,8 +1,43 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
 }
 .Header {
   color: #443e3e;
-  text-shadow: 1px 1px 5px #fff;
+  font-size: 80px;
 }
 /* write your parent styles in here for your App.js */
+
+.characters-holder{
+  background: rgba(255, 255, 255, 0.358);
+  width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  border-radius: 15px;
+}
+.specific-character{
+  background: rgb(26, 20, 20);
+  color: white;
+  padding: 10px;
+  margin: 40px auto;
+  border-radius: 25px;
+  width: 400px;
+} 
+.specific-character:hover{
+  transform: scale(1.1)
+}
+
+.specific-character span{
+  font-size: 20px;
+  color: rgb(174, 84, 74);
+}
+
+.specific-character h2{
+  color: rgb(203, 30, 30);
+  font-size: 35px;
+}
+
+.specific-character p{
+  font-size: 25px;
+}

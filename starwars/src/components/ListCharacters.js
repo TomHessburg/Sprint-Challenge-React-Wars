@@ -7,7 +7,7 @@ const ListCharacter = props => {
     return(
         <div className="characters-holder">
             {props.characters.map(character => {
-                return <Character characterName={character.name} character={character} key={character.id} />
+                return <Character characterName={character.name} character={character} key={character.created} />
             })}
 
         </div>
