@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
+import ListCharacter from './components/ListCharacters'
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      charName: "React Wars"
     };
   }
-
+ 
   componentDidMount() {
     this.getCharacters('https://swapi.co/api/people');
   }
@@ -22,17 +24,35 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
+        console.log(data);
         this.setState({ starwarsChars: data.results });
       })
       .catch(err => {
         throw new Error(err);
       });
   };
+  sortNames = e => {
+    e.preventDefault();
+
+    this.setState({
+      starwarsChars: this.state.starwarsChars.reverse()
+    })
+  }
+
+  doAThing = e => {
+    this.setState({
+      charName: e.target.value
+    })
+
+  }
 
   render() {
     return (
       <div className="App">
-        <h1 className="Header">React Wars</h1>
+        <h1 className="Header">{this.state.charName}</h1>
+        <button onClick={this.sortNames}>reverse the list</button>
+        <ListCharacter characters={this.state.starwarsChars} doAThing={this.doAThing} />
+        
       </div>
     );
   }

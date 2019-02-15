@@ -26,11 +26,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+    React JS is a components based UI library for javascript. It makes building interactive UI's in javscript easier, and more over more efficient. An example might be Reacts synthetic events that are placed directly on the JSX you use to write React code. Not only is it simpler than doing a full on getElementByClassName etc etc, but the way the team has set up synthetic events, it much mroe efficient.
+
+
 - [ ] What does it mean to _think_ in react?
+
+    To be entirely honest i dont think we talked about this exactly, but if you litterally just mean "think", I would say this: React has a prettty specific work flow. Everything flows in one direction in a tree liek structure, Different components hold different information and pass that information down to the children when needed, and the children pass it back up when needed. Thinking in react is thinking in this manner
+
 
 - [ ] Describe state.
 
+    State, in lamens terms, is the current way that your page is represented. State changes constantly. When we input some data, we may be listening to this in our state, and the state of our page will change accordingly.
+
+
 - [ ] Describe props.
+
+    Props is a property of a specific element. It can be passed around and can hold all kinds of thing. Props can be used to change state.
+
 
 ## Project Set Up
 
